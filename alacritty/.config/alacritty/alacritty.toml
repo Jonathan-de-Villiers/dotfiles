@@ -6,10 +6,11 @@ startup_mode = "Maximized"
 
 [keyboard]
 bindings = [
-  { key = "J", mods = "Alt", chars = "\u001bJ" },
+  { key = "J", mods = "Alt", chars = "\u001bj" },
   { key = "J", mods = "Alt|Shift", chars = "\u001bJ" },
-  { key = "K", mods = "Alt", chars = "\u001bK" },
+  { key = "K", mods = "Alt", chars = "\u001bk" },
   { key = "K", mods = "Alt|Shift", chars = "\u001bK" },
+{ key = "Q", mods = "Control", action = "Quit" },
 ]
 
 [font]
