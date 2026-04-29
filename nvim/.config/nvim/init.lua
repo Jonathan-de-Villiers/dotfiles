@@ -172,12 +172,6 @@ vim.o.confirm = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>')
 
--- close floating git terminal
-vim.keymap.set('n', '<leader>gq', function() git_float:toggle() end, { desc = 'Close git terminal' })
-
--- close bottom terminal
-vim.keymap.set('n', '<leader>tq', function() bottom_term:toggle() end, { desc = 'Close bottom terminal' })
-
 -- don't copy when deleting single character
 vim.keymap.set('n', 'x', '"_x')
 
