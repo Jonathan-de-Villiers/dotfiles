@@ -157,7 +157,7 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 20
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -171,6 +171,21 @@ vim.o.confirm = true
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>')
+
+-- Move line up/down in normal mode
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
+-- Move selected lines in visual mode
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+
+-- Duplicate line in normal mode
+vim.keymap.set("n", "<A-S-j>", "yyp", { desc = "Duplicate line down" })
+vim.keymap.set("n", "<A-S-k>", "yyP", { desc = "Duplicate line up" })
+
+-- Duplicate selection in visual mode
+vim.keymap.set("v", "<A-S-j>", "y'>p", { desc = "Duplicate selection down" })
+vim.keymap.set("v", "<A-S-k>", "y'<P", { desc = "Duplicate selection up" })
 
 -- don't copy when deleting single character
 vim.keymap.set('n', 'x', '"_x')
