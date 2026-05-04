@@ -14,13 +14,14 @@ bindings = [
 ]
 
 [font]
-size = 13.5
+size = 12
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 
 [font.offset]
-y = 2
+y = 1
+x = 1
 
 [colors]
 transparent_background_colors = true
