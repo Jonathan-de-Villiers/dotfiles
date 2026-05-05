@@ -54,13 +54,15 @@ return {
         height = 25,
       },
       on_open = function() set_terminal_keymaps() end,
+      close_on_exit = true
     }
 
     local bottom_term = Terminal:new {
       direction = 'horizontal',
-      size = function() return math.floor(vim.o.lines * 0.25) end,
+      size = function() return math.floor(vim.o.lines * 0.15) end,
       hidden = true,
       on_open = function() set_terminal_keymaps() end,
+      close_on_exit = true
     }
 
     vim.keymap.set('n', '<leader>gg', function()
