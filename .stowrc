@@ -1,6 +1,5 @@
 # Target directory
--t /Users/jonathan
-
+-t $HOME
 # Verbosity
 -v 2
 
