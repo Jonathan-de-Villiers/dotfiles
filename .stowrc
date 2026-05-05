@@ -1,0 +1,18 @@
+# Target directory
+-t /Users/jonathan
+
+# Verbosity
+-v 2
+
+# Restow behavior
+-R
+
+# Ignore junk
+--ignore='\.DS_Store'
+--ignore='\.git'
+--ignore='\.gitignore'
+--ignore='\.stowrc'
+--ignore='README.md'
+--ignore='node_modules'
+--ignore='.*\.swp'
+--ignore='.*\.bak'

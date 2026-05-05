@@ -1,0 +1,41 @@
+[window]
+opacity = 0.92
+decorations = "Buttonless"
+padding = { x = 12, y = 12 }
+startup_mode = "Maximized"
+
+[keyboard]
+bindings = [
+  { key = "J", mods = "Alt", chars = "\u001bj" },
+  { key = "J", mods = "Alt|Shift", chars = "\u001bJ" },
+  { key = "K", mods = "Alt", chars = "\u001bk" },
+  { key = "K", mods = "Alt|Shift", chars = "\u001bK" },
+{ key = "Q", mods = "Control", action = "Quit" },
+]
+
+[font]
+size = 12
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[font.offset]
+y = 1
+x = 1
+
+[colors]
+transparent_background_colors = true
+
+[colors.primary]
+background = "#1a1b26"
+foreground = "#c0caf5"
+
+[colors.normal]
+black   = "#15161E"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#a9b1d6"
