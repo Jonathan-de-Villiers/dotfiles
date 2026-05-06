@@ -10,6 +10,10 @@ return {
       shade_terminals = true,
     }
 
+    local function set_insert_mode()
+      vim.schedule(function() vim.cmd 'startinsert' end)
+    end
+
     local Terminal = require('toggleterm.terminal').Terminal
 
     local function set_terminal_keymaps()
@@ -53,16 +57,22 @@ return {
         width = 100,
         height = 25,
       },
-      on_open = function() set_terminal_keymaps() end,
-      close_on_exit = true
+      on_open = function()
+        set_terminal_keymaps()
+        set_insert_mode()
+      end,
+      close_on_exit = true,
     }
 
     local bottom_term = Terminal:new {
       direction = 'horizontal',
       size = function() return math.floor(vim.o.lines * 0.15) end,
       hidden = true,
-      on_open = function() set_terminal_keymaps() end,
-      close_on_exit = true
+      on_open = function()
+        set_terminal_keymaps()
+        set_insert_mode()
+      end,
+      close_on_exit = true,
     }
 
     vim.keymap.set('n', '<leader>gg', function()
